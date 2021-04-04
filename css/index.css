@@ -1,0 +1,24 @@
+
+  html {scroll-behavior: smooth;}
+
+
+
+  .fakeimg {
+      height: 25%;
+      max-width: 60%;
+      max-height:200px ;
+    background: #aaa;
+    }
+
+   #num2, #num3, #num4, #num5 {
+    opacity: 1;
+   } 
+
+  p{font-size: 18px;}
+
+  @media only screen and (max-width: 600px) {
+      .fakeimg{
+          height: auto;
+          max-width: 100%;
+      }
+  }
