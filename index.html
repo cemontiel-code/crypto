@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Criptomonedas</title>
+  <link rel="shortcut icon" href="css/img/svg/001-bitcoin-22.svg" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body  onresize="mediaChange()" onload="mediaChange()">
+
+<div class="jumbotron text-center rounded-0 bg-danger text-white"  style="margin-bottom:0;">
+
+  <svg id='logo' version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width='250' height="250"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<path style="fill:#FFD173;" d="M145.067,68.267c4.71,0,8.533,3.823,8.533,8.533c0.017,2.304-0.939,4.506-2.645,6.059
+		c-1.527,1.613-3.661,2.509-5.888,2.475h-25.6V68.267H145.067z"/>
+	<path style="fill:#FFD173;" d="M145.067,102.4c4.71,0,8.533,3.823,8.533,8.533c0.017,2.304-0.939,4.506-2.645,6.059
+		c-1.527,1.613-3.661,2.509-5.888,2.475h-25.6V102.4H145.067z"/>
+	<rect x="494.933" y="247.467" style="fill:#FFD173;" width="17.067" height="76.8"/>
+	<rect x="494.933" y="213.333" style="fill:#FFD173;" width="17.067" height="17.067"/>
+	<rect x="494.933" y="8.533" style="fill:#FFD173;" width="17.067" height="59.733"/>
+	<rect x="452.267" y="68.267" style="fill:#FFD173;" width="17.067" height="76.8"/>
+	<rect x="452.267" y="34.133" style="fill:#FFD173;" width="17.067" height="17.067"/>
+</g>
+<path style="fill:#62BEFF;" d="M457.045,396.288c4.992,5.001,4.992,13.107-0.009,18.099c-2.398,2.398-5.649,3.746-9.037,3.746
+	h-21.333v-25.6H448C451.396,392.533,454.647,393.89,457.045,396.288z"/>
+<g>
+	<path style="fill:#DAEFF6;" d="M426.667,435.2v34.133H409.6v-42.667c0,4.71,3.823,8.533,8.533,8.533H426.667z"/>
+	<path style="fill:#DAEFF6;" d="M460.8,405.333c0-7.066-5.734-12.8-12.8-12.8h-21.333v25.6H448
+		C455.066,418.133,460.8,412.399,460.8,405.333z M426.667,426.667h-8.533V384H448c11.785,0,21.333,9.549,21.333,21.333
+		c0,11.785-9.549,21.333-21.333,21.333H426.667z"/>
+	<path style="fill:#DAEFF6;" d="M418.133,384v42.667H409.6V384c0-4.71,3.823-8.533,8.533-8.533H448
+		c16.495,0,29.867,13.372,29.867,29.867c0,16.495-13.372,29.867-29.867,29.867h-21.333v-8.533H448
+		c11.785,0,21.333-9.549,21.333-21.333c0-11.785-9.549-21.333-21.333-21.333H418.133z"/>
+	<path style="fill:#DAEFF6;" d="M418.133,435.2c-4.71,0-8.533-3.823-8.533-8.533h17.067v8.533H418.133z"/>
+</g>
+<path style="fill:#41BD8C;" d="M341.333,102.4c42.419,0,76.8,34.381,76.8,76.8s-34.381,76.8-76.8,76.8s-76.8-34.381-76.8-76.8
+	C264.602,136.815,298.948,102.468,341.333,102.4z M341.333,221.867c23.561,0,42.667-19.106,42.667-42.667
+	s-19.106-42.667-42.667-42.667h-25.6c-4.71,0-8.533,3.823-8.533,8.533v68.267c0,4.71,3.823,8.533,8.533,8.533H341.333z"/>
+<rect x="384" y="375.467" style="fill:#DAEFF6;" width="17.067" height="93.867"/>
+<path style="fill:#62BEFF;" d="M418.133,375.467c-4.71,0-8.533,3.823-8.533,8.533v85.333h17.067V435.2H448
+	c16.495,0,29.867-13.372,29.867-29.867c0-16.495-13.372-29.867-29.867-29.867H418.133z M401.067,469.333v-93.867H384v93.867H401.067
+	z M494.933,418.133c0,42.419-34.381,76.8-76.8,76.8s-76.8-34.381-76.8-76.8s34.381-76.8,76.8-76.8
+	C460.518,341.402,494.865,375.748,494.933,418.133z"/>
+<rect x="324.267" y="170.667" style="fill:#03AA6F;" width="25.6" height="17.067"/>
+<path style="fill:#41BD8C;" d="M359.424,161.024c10.018,10.01,10.018,26.249,0,36.267c-4.796,4.796-11.307,7.501-18.091,7.509
+	h-17.067v-17.067h25.6v-17.067h-25.6V153.6h17.067C348.109,153.583,354.611,156.254,359.424,161.024z"/>
+<g>
+	<path style="fill:#168DE2;" d="M418.133,503.467c-47.13,0-85.333-38.204-85.333-85.333s38.204-85.333,85.333-85.333
+		s85.333,38.204,85.333,85.333S465.263,503.467,418.133,503.467z M418.133,494.933c42.419,0,76.8-34.381,76.8-76.8
+		s-34.381-76.8-76.8-76.8s-76.8,34.381-76.8,76.8C341.402,460.518,375.748,494.865,418.133,494.933z"/>
+	<path style="fill:#168DE2;" d="M418.133,332.8c-47.13,0-85.333,38.204-85.333,85.333s38.204,85.333,85.333,85.333
+		s85.333-38.204,85.333-85.333S465.263,332.8,418.133,332.8z M512,418.133c0,51.84-42.027,93.867-93.867,93.867
+		s-93.867-42.027-93.867-93.867s42.027-93.867,93.867-93.867C469.965,324.301,511.966,366.302,512,418.133z"/>
+</g>
+<rect x="315.733" y="170.667" style="fill:#03AA6F;" width="8.533" height="17.067"/>
+<rect x="307.2" style="fill:#FFD173;" width="17.067" height="59.733"/>
+<path style="fill:#03AA6F;" d="M375.467,179.2c0,18.85-15.283,34.133-34.133,34.133h-25.6v-25.6h8.533V204.8h17.067
+	c14.14,0,25.6-11.46,25.6-25.6c0-14.14-11.46-25.6-25.6-25.6h-17.067v17.067h-8.533v-25.6h25.6
+	c18.825-0.026,34.108,15.223,34.133,34.048C375.467,179.14,375.467,179.174,375.467,179.2z"/>
+<rect x="298.667" y="477.867" style="fill:#FFD173;" width="17.067" height="17.067"/>
+<path style="fill:#03AA6F;" d="M371.456,148.992c16.683,16.64,16.717,43.657,0.077,60.339c-8.004,8.021-18.867,12.535-30.199,12.535
+	h-25.6c-4.71,0-8.533-3.823-8.533-8.533v-68.267c0-4.71,3.823-8.533,8.533-8.533h25.6
+	C352.623,136.542,363.46,141.022,371.456,148.992z M341.333,213.333c18.85,0,34.133-15.283,34.133-34.133
+	s-15.283-34.133-34.133-34.133h-25.6v68.267H341.333z"/>
+<g>
+	<rect x="256" y="366.933" style="fill:#FFD173;" width="17.067" height="76.8"/>
+	<rect x="256" y="332.8" style="fill:#FFD173;" width="17.067" height="17.067"/>
+</g>
+<g>
+	<path style="fill:#03AA6F;" d="M341.333,93.867c47.13,0,85.333,38.204,85.333,85.333s-38.204,85.333-85.333,85.333
+		S256,226.33,256,179.2S294.204,93.867,341.333,93.867z M341.333,256c42.419,0,76.8-34.381,76.8-76.8s-34.381-76.8-76.8-76.8
+		s-76.8,34.381-76.8,76.8C264.602,221.585,298.948,255.932,341.333,256z"/>
+	<path style="fill:#03AA6F;" d="M341.333,264.533c47.13,0,85.333-38.204,85.333-85.333s-38.204-85.333-85.333-85.333
+		S256,132.07,256,179.2S294.204,264.533,341.333,264.533z M341.333,85.333c51.84,0,93.867,42.027,93.867,93.867
+		s-42.027,93.867-93.867,93.867s-93.867-42.027-93.867-93.867C247.501,127.369,289.502,85.367,341.333,85.333z"/>
+</g>
+<g>
+	<rect x="196.267" y="213.333" style="fill:#FFD173;" width="17.067" height="34.133"/>
+	<rect x="196.267" y="179.2" style="fill:#FFD173;" width="17.067" height="17.067"/>
+</g>
+<path style="fill:#FE7C26;" d="M157.099,122.965c3.243-3.157,5.06-7.501,5.035-12.032c-0.009-4.352-1.69-8.542-4.693-11.691
+	c2.091-1.118,3.985-2.56,5.632-4.267c0.358-0.35,0.708-0.717,1.024-1.109c9.438,10.53,8.559,26.709-1.971,36.147
+	c-2.483,2.227-5.385,3.951-8.525,5.069V128h-8.533C149.598,128.026,153.941,126.208,157.099,122.965z"/>
+<g>
+	<rect x="145.067" y="494.933" style="fill:#FFD173;" width="17.067" height="17.067"/>
+	<rect x="145.067" y="460.8" style="fill:#FFD173;" width="17.067" height="17.067"/>
+</g>
+<g>
+	<path style="fill:#FE7C26;" d="M163.072,94.976c-1.647,1.707-3.541,3.149-5.632,4.267c-3.081-3.345-7.398-5.291-11.947-5.376
+		c4.386-0.077,8.559-1.886,11.605-5.035l0.341-0.341c2.492,1.425,4.736,3.243,6.656,5.376
+		C163.78,94.259,163.43,94.626,163.072,94.976z"/>
+	<path style="fill:#FE7C26;" d="M157.44,88.491l-0.341,0.341c-3.046,3.149-7.219,4.958-11.605,5.035h-0.427v-8.533
+		C149.385,85.359,153.634,86.443,157.44,88.491z"/>
+	<path style="fill:#FE7C26;" d="M153.6,52.736v6.997h-17.067V51.2h8.533C147.985,51.183,150.878,51.703,153.6,52.736z"/>
+	<path style="fill:#FE7C26;" d="M153.6,42.667v10.069c-2.722-1.033-5.615-1.553-8.533-1.536h-8.533v-8.533H153.6z"/>
+	<path style="fill:#FE7C26;" d="M153.6,52.736c10.206,3.61,17.033,13.244,17.067,24.064c0.051,6.315-2.304,12.416-6.571,17.067
+		c-1.92-2.133-4.164-3.951-6.656-5.376c3.038-3.132,4.727-7.33,4.693-11.691c-0.034-9.242-7.398-16.794-16.64-17.067h8.107V52.736z"
+		/>
+</g>
+<path style="fill:#00448F;" d="M141.227,359.339l7.68,15.189l-17.067,8.533c-2.406,1.254-5.274,1.254-7.68,0l-17.067-8.533
+	l7.68-15.189L128,365.909L141.227,359.339z"/>
+<g>
+	<path style="fill:#FE7C26;" d="M145.493,93.867c4.548,0.085,8.866,2.031,11.947,5.376c-3.789,2.091-8.047,3.174-12.373,3.157
+		v-8.533H145.493z"/>
+	<path style="fill:#FE7C26;" d="M145.067,128h8.533v7.083c-2.739,0.964-5.623,1.459-8.533,1.451h-8.533V128H145.067z"/>
+	<path style="fill:#FE7C26;" d="M145.067,136.533c2.91,0.009,5.794-0.486,8.533-1.451v9.984h-17.067v-8.533H145.067z"/>
+	<rect x="119.467" y="51.2" style="fill:#FE7C26;" width="17.067" height="8.533"/>
+	<rect x="119.467" y="128" style="fill:#FE7C26;" width="17.067" height="8.533"/>
+</g>
+<path style="fill:#AFE9F9;" d="M185.685,372.48c2.569-3.046,2.714-7.458,0.341-10.667l-51.2-68.267
+	c-1.655-2.074-4.173-3.268-6.827-3.243l0.171-8.704c42.419,0.051,76.766,34.466,76.715,76.885S170.419,435.251,128,435.2
+	c2.492-0.009,4.855-1.101,6.485-2.987L185.685,372.48z"/>
+<g>
+	<path style="fill:#FE7C26;" d="M110.933,119.467v-25.6h8.533v-8.533h25.6V102.4h-25.6v17.067h25.6
+		c2.227,0.034,4.361-0.862,5.888-2.475c1.707-1.553,2.662-3.755,2.645-6.059c0-4.71-3.823-8.533-8.533-8.533
+		c4.326,0.017,8.585-1.067,12.373-3.157c3.004,3.149,4.685,7.339,4.693,11.691c-0.068,9.395-7.671,16.998-17.067,17.067h-25.6
+		C119.467,123.29,115.644,119.467,110.933,119.467z"/>
+	<rect x="110.933" y="85.333" style="fill:#FE7C26;" width="8.533" height="8.533"/>
+	<path style="fill:#FE7C26;" d="M119.467,59.733c0,4.71-3.823,8.533-8.533,8.533v-8.533H119.467z"/>
+	<path style="fill:#FE7C26;" d="M119.467,128h-8.533v-8.533C115.644,119.467,119.467,123.29,119.467,128z"/>
+	<path style="fill:#FE7C26;" d="M119.467,85.333h-8.533V68.267c4.71,0,8.533-3.823,8.533-8.533h26.027
+		c9.242,0.273,16.606,7.825,16.64,17.067c0.034,4.361-1.655,8.559-4.693,11.691c-3.806-2.048-8.055-3.132-12.373-3.157
+		c2.227,0.034,4.361-0.862,5.888-2.475c1.707-1.553,2.662-3.755,2.645-6.059c0-4.71-3.823-8.533-8.533-8.533h-25.6V85.333z"/>
+	<rect x="102.4" y="93.867" style="fill:#FE7C26;" width="8.533" height="25.6"/>
+	<path style="fill:#FE7C26;" d="M110.933,85.333v8.533H102.4C102.4,89.156,106.223,85.333,110.933,85.333z"/>
+	<path style="fill:#FE7C26;" d="M110.933,136.533c-4.71,0-8.533-3.823-8.533-8.533v-8.533h8.533V128h8.533v8.533H110.933z"/>
+	<path style="fill:#FE7C26;" d="M102.4,59.733c0-4.71,3.823-8.533,8.533-8.533h8.533v8.533h-8.533v8.533H102.4V59.733z"/>
+</g>
+<path style="fill:#AFE9F9;" d="M114.773,359.339l-7.68,15.189l17.067,8.533c2.406,1.254,5.274,1.254,7.68,0l17.067-8.533
+	l-7.68-15.189L128,365.909L114.773,359.339z M128,413.525l-40.277-46.933L128,312.917l40.277,53.675L128,413.525z"/>
+<g>
+	<path style="fill:#FE7C26;" d="M102.4,93.867v-25.6h8.533v17.067C106.223,85.333,102.4,89.156,102.4,93.867z"/>
+	<path style="fill:#FE7C26;" d="M102.4,128c0,4.71,3.823,8.533,8.533,8.533h8.533v8.533H102.4v-8.533h-8.533v-17.067h8.533V128z"/>
+</g>
+<path style="fill:#FFD173;" d="M128,170.667c-42.419,0-76.8-34.381-76.8-76.8s34.381-76.8,76.8-76.8s76.8,34.381,76.8,76.8
+	C204.732,136.252,170.385,170.598,128,170.667z M102.4,68.267v51.2h-8.533v17.067h8.533v8.533h17.067v-8.533h17.067v8.533H153.6
+	v-9.984c13.321-4.727,20.292-19.362,15.565-32.691c-1.118-3.149-2.842-6.042-5.069-8.525c4.267-4.651,6.622-10.752,6.571-17.067
+	c-0.034-10.82-6.861-20.454-17.067-24.064V42.667h-17.067V51.2h-17.067v-8.533H102.4V51.2h-8.533v17.067H102.4z"/>
+<path style="fill:#FE7C26;" d="M102.4,59.733v8.533h-8.533V51.2h8.533v-8.533h17.067V51.2h-8.533
+	C106.223,51.2,102.4,55.023,102.4,59.733z"/>
+<g>
+	<path style="fill:#00448F;" d="M76.8,366.933l51.2-68.267l51.2,68.267L128,426.667L76.8,366.933z M128,312.917l-40.277,53.675
+		L128,413.525l40.277-46.933L128,312.917z"/>
+	<path style="fill:#00448F;" d="M128,298.667l-51.2,68.267l51.2,59.733l51.2-59.733L128,298.667z M121.515,432.213l-51.2-59.733
+		c-2.569-3.046-2.714-7.458-0.341-10.667l51.2-68.267c3.072-3.772,8.619-4.335,12.39-1.263c0.461,0.375,0.887,0.802,1.263,1.263
+		l51.2,68.267c2.372,3.209,2.227,7.62-0.341,10.667l-51.2,59.733c-3.063,3.584-8.448,4.002-12.032,0.939
+		C122.121,432.862,121.805,432.546,121.515,432.213z"/>
+</g>
+<path style="fill:#AFE9F9;" d="M70.315,372.48l51.2,59.733c1.63,1.886,3.994,2.978,6.485,2.987c-42.419,0-76.8-34.381-76.8-76.8
+	s34.381-76.8,76.8-76.8h0.171L128,290.304c-2.654-0.026-5.171,1.169-6.827,3.243l-51.2,68.267
+	C67.601,365.022,67.746,369.434,70.315,372.48z"/>
+<path style="fill:#FE7C26;" d="M128,179.2c-47.13,0-85.333-38.204-85.333-85.333S80.87,8.533,128,8.533s85.333,38.204,85.333,85.333
+	S175.13,179.2,128,179.2z M51.2,93.867c0,42.419,34.381,76.8,76.8,76.8s76.8-34.381,76.8-76.8s-34.381-76.8-76.8-76.8
+	C85.615,17.135,51.268,51.482,51.2,93.867z"/>
+<path style="fill:#00448F;" d="M128,443.733c-47.13,0-85.333-38.204-85.333-85.333S80.87,273.067,128,273.067
+	s85.333,38.204,85.333,85.333S175.13,443.733,128,443.733z M51.2,358.4c0,42.419,34.381,76.8,76.8,76.8s76.8-34.381,76.8-76.8
+	c0-42.351-34.278-76.706-76.629-76.8H128C85.615,281.668,51.268,316.015,51.2,358.4z"/>
+<g>
+	<rect x="25.6" y="238.933" style="fill:#FFD173;" width="17.067" height="34.133"/>
+	<rect x="25.6" y="204.8" style="fill:#FFD173;" width="17.067" height="17.067"/>
+</g>
+<path style="fill:#FE7C26;" d="M34.133,93.867C34.133,42.027,76.16,0,128,0s93.867,42.027,93.867,93.867S179.84,187.733,128,187.733
+	C76.169,187.699,34.167,145.698,34.133,93.867z M42.667,93.867c0,47.13,38.204,85.333,85.333,85.333s85.333-38.204,85.333-85.333
+	S175.13,8.533,128,8.533S42.667,46.737,42.667,93.867z"/>
+<path style="fill:#00448F;" d="M34.133,358.4c0-51.84,42.027-93.867,93.867-93.867s93.867,42.027,93.867,93.867
+	S179.84,452.267,128,452.267C76.169,452.233,34.167,410.232,34.133,358.4z M128,273.067c-47.13,0-85.333,38.204-85.333,85.333
+	S80.87,443.733,128,443.733s85.333-38.204,85.333-85.333S175.13,273.067,128,273.067z"/>
+<g>
+	<rect y="435.2" style="fill:#FFD173;" width="17.067" height="76.8"/>
+	<rect y="401.067" style="fill:#FFD173;" width="17.067" height="17.067"/>
+	<rect y="170.667" style="fill:#FFD173;" width="17.067" height="25.6"/>
+	<rect style="fill:#FFD173;" width="17.067" height="25.6"/>
+</g>
+<path d="M102.4,145.067h17.067v-8.533h17.067v8.533H153.6v-10.103c13.235-4.582,20.258-19.021,15.676-32.256
+	c-1.135-3.277-2.927-6.281-5.265-8.841c9.463-10.325,8.755-26.368-1.57-35.831c-2.56-2.338-5.564-4.13-8.841-5.265V42.667h-17.067
+	V51.2h-17.067v-8.533H102.4V51.2h-8.533v17.067h8.533v51.2h-8.533v17.067h8.533V145.067z M119.467,68.267h25.6
+	c4.71,0,8.533,3.823,8.533,8.533s-3.823,8.533-8.533,8.533h-25.6V68.267z M119.467,102.4h25.6c4.71,0,8.533,3.823,8.533,8.533
+	c0,4.71-3.823,8.533-8.533,8.533h-25.6V102.4z"/>
+<path d="M128,187.733c51.84,0,93.867-42.027,93.867-93.867S179.84,0,128,0S34.133,42.027,34.133,93.867
+	C34.193,145.681,76.186,187.674,128,187.733z M128,17.067c42.419,0,76.8,34.381,76.8,76.8s-34.381,76.8-76.8,76.8
+	s-76.8-34.381-76.8-76.8C51.251,51.473,85.606,17.118,128,17.067z"/>
+<path d="M221.867,358.4c0-51.84-42.027-93.867-93.867-93.867S34.133,306.56,34.133,358.4S76.16,452.267,128,452.267
+	C179.814,452.207,221.807,410.214,221.867,358.4z M128,435.2c-42.419,0-76.8-34.381-76.8-76.8s34.381-76.8,76.8-76.8
+	s76.8,34.381,76.8,76.8C204.749,400.794,170.394,435.149,128,435.2z"/>
+<path d="M185.677,372.489c2.603-3.038,2.748-7.475,0.35-10.675l-51.2-68.267c-3.106-3.772-8.67-4.309-12.442-1.212
+	c-0.444,0.367-0.845,0.768-1.212,1.212l-51.2,68.267c-2.398,3.2-2.253,7.637,0.35,10.675l51.2,59.733
+	c3.072,3.575,8.457,3.985,12.032,0.922c0.333-0.282,0.64-0.589,0.922-0.922L185.677,372.489z M87.731,366.575L128,312.892
+	l40.269,53.683L128,413.551L87.731,366.575z"/>
+<path d="M141.252,359.296L128,365.926l-13.252-6.63l-7.629,15.275l17.067,8.533c2.398,1.203,5.231,1.203,7.629,0l17.067-8.533
+	L141.252,359.296z"/>
+<path d="M418.133,324.267c-51.84,0-93.867,42.027-93.867,93.867S366.293,512,418.133,512S512,469.973,512,418.133
+	C511.94,366.319,469.948,324.326,418.133,324.267z M418.133,494.933c-42.419,0-76.8-34.381-76.8-76.8s34.381-76.8,76.8-76.8
+	s76.8,34.381,76.8,76.8C494.882,460.527,460.527,494.882,418.133,494.933z"/>
+<path d="M341.333,273.067c51.84,0,93.867-42.027,93.867-93.867s-42.027-93.867-93.867-93.867s-93.867,42.027-93.867,93.867
+	C247.526,231.014,289.519,273.007,341.333,273.067z M341.333,102.4c42.419,0,76.8,34.381,76.8,76.8s-34.381,76.8-76.8,76.8
+	s-76.8-34.381-76.8-76.8C264.585,136.806,298.94,102.451,341.333,102.4z"/>
+<path d="M448,375.467h-29.867c-4.71,0-8.533,3.823-8.533,8.533v85.333h17.067V435.2H448c16.495,0,29.867-13.372,29.867-29.867
+	C477.867,388.838,464.495,375.467,448,375.467z M448,418.133h-21.333v-25.6H448c7.066,0,12.8,5.734,12.8,12.8
+	C460.8,412.399,455.066,418.133,448,418.133z"/>
+<rect x="384" y="375.467" width="17.067" height="93.867"/>
+<path d="M315.733,221.867h25.6c23.561,0,42.667-19.106,42.667-42.667s-19.106-42.667-42.667-42.667h-25.6
+	c-4.71,0-8.533,3.823-8.533,8.533v68.267C307.2,218.044,311.023,221.867,315.733,221.867z M324.267,187.733h25.6v-17.067h-25.6
+	V153.6h17.067c14.14,0,25.6,11.46,25.6,25.6c0,14.14-11.46,25.6-25.6,25.6h-17.067V187.733z"/>
+<rect x="494.933" y="8.533" width="17.067" height="59.733"/>
+<rect width="17.067" height="25.6"/>
+<rect x="452.267" y="68.267" width="17.067" height="76.8"/>
+<rect y="170.667" width="17.067" height="25.6"/>
+<rect x="25.6" y="204.8" width="17.067" height="17.067"/>
+<rect x="25.6" y="238.933" width="17.067" height="34.133"/>
+<rect x="145.067" y="460.8" width="17.067" height="17.067"/>
+<rect x="145.067" y="494.933" width="17.067" height="17.067"/>
+<rect x="298.667" y="477.867" width="17.067" height="17.067"/>
+<rect x="196.267" y="179.2" width="17.067" height="17.067"/>
+<rect x="196.267" y="213.333" width="17.067" height="34.133"/>
+<rect x="452.267" y="34.133" width="17.067" height="17.067"/>
+<rect x="256" y="366.933" width="17.067" height="76.8"/>
+<rect x="307.2" width="17.067" height="59.733"/>
+<rect x="256" y="332.8" width="17.067" height="17.067"/>
+<rect x="494.933" y="247.467" width="17.067" height="76.8"/>
+<rect x="494.933" y="213.333" width="17.067" height="17.067"/>
+<rect y="435.2" width="17.067" height="76.8"/>
+<rect y="401.067" width="17.067" height="17.067"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+  </svg>
+  <h1 id="headertext" class="display-1">Criptomonedas </h1>
+  <p>La moneda del futuro</p> 
+</div>
+
+<nav class="navbar navbar-expand-md rounded-0 bg-light pl-2 mb-0 navbar-light sticky-top">
+  <a class="navbar-brand" href="#"> <span> <img src="css/img/svg/001-bitcoin-22.svg" alt=""></span>Cripto </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse flex-row-reverse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#num1">Criptomonedas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#num2">trading</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#num3">mercado</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="#num4">minado</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="#num5">ambiente</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+<div id="num1"></div>
+<br><br>
+<div class="container-fluid p-4 mt-0" style="margin-top:30px">
+      <h1 class="text-sm-center" >Que son las Criptomonedas</h1>
+      <br>
+      <div class="row ">
+        <div class="col-md-4">
+            <img class="rounded" src="css/img/svg/012-bitcoin-15.svg" alt="" style="background-color: #AFE9F9;"> 
+            <br><br>
+            <div class="fakeimg mx-auto">publicidad</div>
+            <br>
+        </div>
+
+        <div class="col-md-8">
+        <p>Las criptomonedas son monedas virtuales. Pueden ser intercambiadas y operadas como cualquier otra divisa tradicional, pero están fuera del control de los gobiernos e instituciones financieras.</p>
+        <p>
+        Existe un gran número de criptodivisas disponibles, todas con sus propias características y aplicaciones. Las que tienen mayor capitalización bursátil son, al menos por ahora, una minoría que incluye el bitcoin, el bitcoin cash, el ether, el litecoin y el dash.</p>
+
+        <p>Las criptomonedas pueden considerarse una alternativa a las divisas tradicionales, pero en realidad fueron concebidas como una solución de pago completamente convencional. En estos momentos, un buen número de tiendas aceptan criptomonedas como forma de pago.</p>
+
+        <p>Aunque es cierto que su validez como método de pago es fundamental para su valor, las criptomonedas habitualmente se parecen más a materias primas como el oro que al mercado de forex. Igual que las materias primas:</p>
+
+        <ul>
+          <li>  
+          <p> <b> El valor de una criptomoneda no está vinculado exclusivamente al comportamiento de una economía concreta</b> </p> 
+          </li>
+          <li>  
+          <p> <b> Los cambios en los tipos de interés y el aumento en las reservas monetarias solo tienen un efecto indirecto en su valor</b> </p> 
+          </li>
+          <li>  
+          <p> <b> El valor de las criptomonedas depende del compromiso de los usuarios por mantener su precio al convertirlas a divisas tradicionales</b> </p> 
+          </li>
+        </ul> 
+
+        <p> Esto significa, al menos por ahora, que las criptodivisas son tratadas principalmente como una materia prima, es decir, una inversión cuyo retorno proviene de la especulación en torno a las subidas y bajadas en su valor. </p>
+
+        </div>
+      </div>
+      <div id="num2"></div>
+      <hr>
+      <br>
+      <div  class="container-fluid text-sm-center ">
+        <h2>
+          ¿Qué es el trading de criptomonedas?
+        </h2>
+        <div class="mx-auto mb-4 mt-2">
+            <img class="rounded-sm border bg-success" src="css/img/svg/018-bitcoin-10.svg"  style="max-width:200px;"> 
+        </div>
+        <div class="container ">
+        
+        <p>Operar con criptomonedas es el acto de especular en torno a los movimientos de los precios de criptodivisas mediante una cuenta de trading de CFD, o comprar y vender las criptomonedas subyacentes en un mercado de negociación.</p>
+
+        <p> <b> Trading de CFD sobre criptomonedas</b> </p>  
+        <p>El trading de CFD es derivado, lo que te permite especular con los movimientos de los precios de criptomonedas sin ser el dueño de las criptodivisas subyacentes. Puedes ir largo (comprar) si piensas que el precio de una criptomoneda subirá, o ir corto (vender) si crees que bajará.</p>
+
+        <p>Los CFD son productos apalancados, lo que significa que solo necesitas abonar un pequeño depósito inicial, conocido como margen, para obtener una exposición completa al mercado subyacente. Tus beneficios y pérdidas se calculan en función del tamaño completo de tu posición, por lo que el apalancamiento magnifica tanto tus ganancias como tus pérdidas.</p>
+
+        <p> <b> Comprar y vender criptomonedas mediante un mercado de negociación</b> </p>
+        <p> Al comprar criptomonedas mediante un mercado de negociación, adquieres las criptodivisas. Tendrás que crear una cuenta de mercado de negociación, aportar el valor total del activo para abrir una posición y almacenar los tokens de la criptomoneda en tu propia cartera hasta que estés listo para vender.</p>
+
+        <p>Los mercados de negociación cuentan con una aguda curva de aprendizaje, ya que uno debe familiarizarse con la tecnología necesaria y aprender a analizar los datos. Muchos mercados de negociación imponen límites en la cantidad de depósito, y las cuentas pueden ser muy costosas de mantener</p>
+
+        </div>
+
+        <div class="fakeimg mx-auto" style="height: 150px;">publicidad</div>
+      </div>
+      <hr>
+      <br>
+      
+      <div id="num3" class="container-fluid text-sm-center ">
+        <h2>
+          ¿Cómo funciona el mercado de criptomonedas?
+        </h2>
+        <div class="mx-auto mb-4 mt-2">
+            <img class="rounded-circle border-info bg-dark" src="css/img/svg/011-bitcoin-16.svg"  style="max-width:200px;"> 
+        </div>
+        <div class="container ">
+        
+        <p>Los mercados de criptomonedas se encuentran descentralizados, lo que significa que estas no las emite ni respalda ninguna autoridad central, como un gobierno. En su lugar, se gestionan mediante una red de ordenadores, aunque pueden comprarse y venderse en mercados de negociación y almacenarse en carteras</p>
+
+        <p>A diferencia de las divisas tradicionales, las criptomonedas solo existen como un registro de propiedad digital compartido almacenado en cadenas de bloques. Cuando un usuario desea enviar a otro unidades de criptomoneda, las manda a la cartera digital del destinatario. La transacción no se considera completada hasta que se verifica y se añade a la cadena de bloques a través de un proceso llamado minado, que también es el proceso mediante el que se crean nuevos tokens de criptomonedas.</p>
+
+        <p> <b> ¿Qué es una cadena de bloques o blockchain? </b> </p>  
+        
+        <p>Una cadena de bloques o blockchain es un registro digital de transacciones. En el campo de las criptomonedas, es el historial de transacciones de cada unidad de criptodivisa que muestra cómo sus propietarios han ido cambiando a lo largo del tiempo. El blockchain funciona registrando transacciones en bloques, añadiendo los nuevos en la parte delantera de la cadena.</p>
+        
+        <div class="mx-auto mb-4 mt-2 p-3">
+          <img class="rounded-sm " src="css/img/svg/029-blockchain.svg"  style="max-width:200px;"> 
+          <img class="rounded-sm " src="css/img/svg/015-lock.svg"  style="max-width:200px;"> 
+        </div>
+        
+        <p> La tecnología de cadena de bloques disfruta de medidas de seguridad únicas que no tienen los archivos de los ordenadores corrientes.</p>
+        <br>
+        <p> <b> Supervisión de la red </b> </p>  
+        <br>
+        <p>Un archivo de la cadena de bloques siempre se almacena en múltiples ordenadores de una red, en lugar de almacenarse en un solo lugar, lo que permite que sea legible para todos los usuarios. Esto hace que el proceso sea transparente y muy difícil de alterar, sin puntos débiles vulnerables a hackeos o a errores humanos o informáticos.</p>
+        <br>
+        <p><b> Criptografía</b></p>
+        <br>
+        <p>Los bloques se conectan mediante criptografía, usando matemáticas complejas e informática. Cualquier intento de modificar los datos altera los vínculos entre los bloques, y puede identificarse como fraudulento por los ordenadores de la red.</p>
+        </div>
+
+        <div class="fakeimg mx-auto" style="height: 150px;" >publicidad</div>
+
+      </div>
+      <hr>
+      <br>
+
+      <div id="num4" class="container-fluid ">
+        <h2 class='text-sm-center'>
+          ¿Qué significa minar criptomonedas?
+        </h2>
+        <div class="mx-auto mb-4 text-sm-center mt-2">
+          <img class="rounded-circle border-info bg-warning" src="css/img/svg/008-bitcoin-17.svg"  style="max-width:200px;"> 
+      </div>
+        <p class="text-sm-center">  
+          El minado de criptomonedas es el proceso a través del cual las transacciones de criptomonedas se verifican y se añaden nuevos bloques a la cadena.
+        </p>
+        <br>
+        
+        <div class="container ">
+        
+        <p><b>Verificar las transacciones</b></p>
+        <div class="row">
+          <div class="col-sm-3"><div class="mx-auto mb-4 text-sm-center mt-2">
+            <img class="rounded border-info bg-success" src="css/img/svg/009-fingerprint.svg"  style="max-width:200px;"> 
+        </div></div>
+          <div class="col-sm-8" >
+             <p>Los ordenadores mineros seleccionan transacciones pendientes de una bolsa y las comprueban para asegurar que el emisor tiene suficientes fondos para completar la transacción. Esto incluye cotejar los detalles de la transacción con el historial de transacciones almacenado en la cadena de bloques. Una segunda verificación confirma que el remitente autoriza la transferencia de fondos usando su clave privada.</p>
+          </div>
+        </div>
+        <br>
+        <p><b>Crear un bloque nuevo</b></p>
+        <div class="row" >
+          <div class="col-sm-3"> 
+            <div class="mx-auto text-sm-center mb-4 ">
+              <img class="rounded-sm bg-primary" src="css/img/svg/026-bitcoin-3.svg"  style="max-width:200px;"> 
+            
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <p>Los ordenadores mineros recopilan transacciones válidas en un bloque nuevo e intentan generar el vínculo criptográfico con el bloque previo encontrando una solución a un algoritmo complejo. Cuando un ordenador logra generar el enlace, añade el bloque a su versión del archivo de la blockchain y transmite la actualización a lo largo de la red.</p>
+          </div>
+        </div>
+        <div class="fakeimg mx-auto" style="height: 150px;" >publicidad</div>
+
+      </div>
+      <hr>
+      <br>
+
+      <div id="num5" class="container-fluid text-sm-center">
+        <h2 >
+          ¿Cómo afecta el bitcoin al medio ambiente?
+        </h2>
+        <p>  
+          La única manera de producir bitcoins, ya que no hay un banco central que emita el billete en papel, es a través de los mineros y cualquier usuario, puede serlo. Los mineros de criptomonedas son los encargados de producir el código hash, el cual se obtiene usando un software creado especialmente para poder sortear problemas criptográficos.
+        </p>
+        
+        <p>La dependencia energética para producir monedas afecta directamente al medio ambiente y al ecosistema eléctrico tradicional; la alta complejidad que genera producirlos, deriva en la necesidad de una gran cantidad de electricidad con un buen montón de problemas asociados.</p>
+
+        <p>La moneda es digital, pero en realidad la contaminación es muy real. La huella de carbono de la minería de bitcoin al año sobrepasa los 17.000 kilotoneladas de dióxido de carbono.</p>
+
+        <img src="css/img/816765-bitcoin/consumo-energia-bitcoin.jpg" alt="">
+        
+        <p>Según Digiconomist (Portal de análisis tecnológico en monedas digitales); estima que actualmente el gasto eléctrico en minería de bitcoin supera al de países como Dinamarca, Bulgaria y Bielorrusia, y supone más del 25% del consumo de energía de Holanda, el 15% de Australia o el 10% de Reino Unido.</p>
+
+            
+
+        
+        <div class="fakeimg mx-auto" style="height: 150px;" >publicidad</div>
+
+    </div>
+
+   </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+  <p>diseñado por Carlos montiel</p>
+  <p>urbe</p>
+</div>
+
+
+</body>
+</html>
